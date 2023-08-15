@@ -13,3 +13,7 @@ class Booking(models.Model):
         return f'{self.user} {self.booking_date} {self.no_of_guests}'
 
 
+class Menu(models.Model):
+    title = models.CharField(max_length=255)
+    price = models.DecimalField(max_digits=6,decimal_places=2)
+    inventory = models.SmallIntegerField()
